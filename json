@@ -23,14 +23,699 @@ output:
             "Name": "org.apache.zookeeper.server.NIOServerCnxn"
         },
         {
+            "name": "metrics:name=gc.G1-Old-Generation.time",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@3eb3c9b1",
+            "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
+            "Filter": "null",
+            "Layout": "%d{ISO8601} %-5p [%t]: %c{2} (%F:%M(%L)) - %m%n",
+            "name": "org.apache.logging.log4j2:type=764c12b6,component=Appenders,name=DRFA",
+            "IgnoreExceptions": true,
+            "Name": "DRFA"
+        },
+        {
+            "modelerType": "sun.management.ThreadImpl",
+            "ThreadAllocatedMemorySupported": true,
+            "ThreadContentionMonitoringEnabled": false,
+            "TotalStartedThreadCount": 61,
+            "CurrentThreadCpuTimeSupported": true,
+            "CurrentThreadUserTime": 100000000,
+            "PeakThreadCount": 50,
+            "AllThreadIds": [
+                71,
+                70,
+                69,
+                65,
+                64,
+                62,
+                61,
+                60,
+                59,
+                58,
+                57,
+                56,
+                55,
+                54,
+                53,
+                52,
+                51,
+                50,
+                49,
+                47,
+                46,
+                45,
+                44,
+                43,
+                42,
+                41,
+                40,
+                39,
+                38,
+                36,
+                35,
+                34,
+                33,
+                32,
+                31,
+                30,
+                25,
+                24,
+                23,
+                22,
+                20,
+                19,
+                18,
+                14,
+                13,
+                12,
+                5,
+                3,
+                2
+            ],
+            "ThreadAllocatedMemoryEnabled": true,
+            "CurrentThreadCpuTime": 116169671,
+            "ObjectName": "java.lang:type=Threading",
+            "ThreadContentionMonitoringSupported": true,
+            "ThreadCpuTimeSupported": true,
+            "ThreadCount": 49,
+            "ThreadCpuTimeEnabled": true,
+            "name": "java.lang:type=Threading",
+            "ObjectMonitorUsageSupported": true,
+            "SynchronizerUsageSupported": true,
+            "DaemonThreadCount": 40
+        },
+        {
+            "Usage": {
+                "init": 2555904,
+                "committed": 13500416,
+                "used": 13390528,
+                "max": 251658240
+            },
+            "UsageThresholdCount": 0,
+            "modelerType": "sun.management.MemoryPoolImpl",
+            "MemoryManagerNames": [
+                "CodeCacheManager"
+            ],
+            "UsageThresholdSupported": true,
+            "UsageThreshold": 0,
+            "PeakUsage": {
+                "init": 2555904,
+                "committed": 13500416,
+                "used": 13398016,
+                "max": 251658240
+            },
+            "Name": "Code Cache",
+            "UsageThresholdExceeded": false,
+            "ObjectName": "java.lang:type=MemoryPool,name=Code Cache",
+            "Type": "NON_HEAP",
+            "CollectionUsageThresholdSupported": false,
+            "Valid": true,
+            "name": "java.lang:type=MemoryPool,name=Code Cache",
+            "CollectionUsage": null
+        },
+        {
+            "modelerType": "sun.management.ManagementFactoryHelper$1",
+            "name": "java.nio:type=BufferPool,name=direct",
+            "TotalCapacity": 84517,
+            "MemoryUsed": 84517,
+            "Count": 15,
+            "Name": "direct",
+            "ObjectName": "java.nio:type=BufferPool,name=direct"
+        },
+        {
+            "name": "metrics:name=cumulative_connection_count",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxCounter",
+            "Count": 2
+        },
+        {
+            "name": "metrics:name=threads.blocked.count",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "MemoryPoolNames": [
+                "Code Cache"
+            ],
+            "modelerType": "sun.management.MemoryManagerImpl",
+            "Valid": true,
+            "name": "java.lang:type=MemoryManager,name=CodeCacheManager",
+            "Name": "CodeCacheManager",
+            "ObjectName": "java.lang:type=MemoryManager,name=CodeCacheManager"
+        },
+        {
+            "name": "metrics:name=memory.non-heap.init",
+            "Value": 2555904,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.pools.Code-Cache.usage",
+            "Value": 0.053209177652994794,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "Usage": {
+                "init": 0,
+                "committed": 29360128,
+                "used": 29360128,
+                "max": -1
+            },
+            "modelerType": "sun.management.MemoryPoolImpl",
+            "MemoryManagerNames": [
+                "G1 Old Generation",
+                "G1 Young Generation"
+            ],
+            "UsageThresholdSupported": false,
+            "CollectionUsageThresholdCount": 0,
+            "PeakUsage": {
+                "init": 0,
+                "committed": 37748736,
+                "used": 37748736,
+                "max": -1
+            },
+            "Name": "G1 Survivor Space",
+            "CollectionUsageThreshold": 0,
+            "ObjectName": "java.lang:type=MemoryPool,name=G1 Survivor Space",
+            "Type": "HEAP",
+            "CollectionUsageThresholdSupported": true,
+            "Valid": true,
+            "name": "java.lang:type=MemoryPool,name=G1 Survivor Space",
+            "CollectionUsage": {
+                "init": 0,
+                "committed": 29360128,
+                "used": 29360128,
+                "max": -1
+            },
+            "CollectionUsageThresholdExceeded": false
+        },
+        {
             "modelerType": "org.apache.logging.log4j.core.jmx.StatusLoggerAdmin",
             "StatusDataHistory": [
-                "2020-06-18 07:59:33,815 hiveserver2-web-64 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-common-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin",
-                "2020-06-18 07:59:33,833 hiveserver2-web-64 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-exec-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin"
+                "2020-06-18 15:33:43,740 hiveserver2-web-55 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-common-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin",
+                "2020-06-18 15:33:43,758 hiveserver2-web-55 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-exec-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin"
+            ],
+            "name": "org.apache.logging.log4j2:type=764c12b6,component=StatusLogger",
+            "Level": "WARN",
+            "StatusData": "[org.apache.logging.log4j.status.StatusData@7c3dd05f, org.apache.logging.log4j.status.StatusData@1db33b4b]",
+            "ObjectName": "org.apache.logging.log4j2:type=764c12b6,component=StatusLogger",
+            "ContextName": "764c12b6"
+        },
+        {
+            "name": "metrics:name=hs2_avg_open_session_time",
+            "Value": "NaN",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=threads.timed_waiting.count",
+            "Value": 18,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.heap.usage",
+            "Value": 0.0041072922200589045,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": false,
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=org.apache.zookeeper.server.NIOServerCnxn",
+            "Level": "WARN",
+            "Name": "org.apache.zookeeper.server.NIOServerCnxn"
+        },
+        {
+            "name": "metrics:name=open_connections",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxCounter",
+            "Count": 0
+        },
+        {
+            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@2fd830a8",
+            "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
+            "Filter": "null",
+            "Layout": "%d{ISO8601} %-5p [%t]: %c{2} (%F:%M(%L)) - %m%n",
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Appenders,name=DRFA",
+            "IgnoreExceptions": true,
+            "Name": "DRFA"
+        },
+        {
+            "name": "metrics:name=gc.G1-Young-Generation.time",
+            "Value": 121,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                "DRFA"
+            ],
+            "IncludeLocation": false,
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=",
+            "Level": "INFO",
+            "Name": ""
+        },
+        {
+            "modelerType": "sun.management.ManagementFactoryHelper$1",
+            "name": "java.nio:type=BufferPool,name=mapped",
+            "TotalCapacity": 0,
+            "MemoryUsed": 0,
+            "Count": 0,
+            "Name": "mapped",
+            "ObjectName": "java.nio:type=BufferPool,name=mapped"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": false,
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=org.apache.zookeeper.ClientCnxnSocketNIO",
+            "Level": "WARN",
+            "Name": "org.apache.zookeeper.ClientCnxnSocketNIO"
+        },
+        {
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=AsyncLoggerRingBuffer",
+            "BufferSize": 262144,
+            "RemainingCapacity": 262144,
+            "modelerType": "org.apache.logging.log4j.core.jmx.RingBufferAdmin"
+        },
+        {
+            "name": "com.sun.management:type=DiagnosticCommand",
+            "modelerType": "sun.management.DiagnosticCommandImpl"
+        },
+        {
+            "name": "metrics:name=buffers.mapped.used",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "com.sun.management:type=HotSpotDiagnostic",
+            "DiagnosticOptions": [
+                {
+                    "name": "HeapDumpBeforeFullGC",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "HeapDumpAfterFullGC",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "HeapDumpOnOutOfMemoryError",
+                    "writeable": true,
+                    "value": "true",
+                    "origin": "VM_CREATION"
+                },
+                {
+                    "name": "HeapDumpPath",
+                    "writeable": true,
+                    "value": "/var/log/hive/hs2_heapdump.hprof",
+                    "origin": "VM_CREATION"
+                },
+                {
+                    "name": "CMSAbortablePrecleanWaitMillis",
+                    "writeable": true,
+                    "value": "100",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "CMSWaitDuration",
+                    "writeable": true,
+                    "value": "2000",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "CMSTriggerInterval",
+                    "writeable": true,
+                    "value": "-1",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintGC",
+                    "writeable": true,
+                    "value": "true",
+                    "origin": "VM_CREATION"
+                },
+                {
+                    "name": "PrintGCDetails",
+                    "writeable": true,
+                    "value": "true",
+                    "origin": "VM_CREATION"
+                },
+                {
+                    "name": "PrintGCDateStamps",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintGCTimeStamps",
+                    "writeable": true,
+                    "value": "true",
+                    "origin": "VM_CREATION"
+                },
+                {
+                    "name": "PrintGCID",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintClassHistogramBeforeFullGC",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintClassHistogramAfterFullGC",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintClassHistogram",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "MinHeapFreeRatio",
+                    "writeable": true,
+                    "value": "40",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "MaxHeapFreeRatio",
+                    "writeable": true,
+                    "value": "70",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "PrintConcurrentLocks",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                },
+                {
+                    "name": "UnlockCommercialFeatures",
+                    "writeable": true,
+                    "value": "false",
+                    "origin": "DEFAULT"
+                }
+            ],
+            "modelerType": "sun.management.HotSpotDiagnostic",
+            "ObjectName": "com.sun.management:type=HotSpotDiagnostic"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": true,
+            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=org.apache.zookeeper.ClientCnxnSocketNIO",
+            "Level": "WARN",
+            "Name": "org.apache.zookeeper.ClientCnxnSocketNIO"
+        },
+        {
+            "name": "metrics:name=jvm.pause.extraSleepTime",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxCounter",
+            "Count": 2
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": true,
+            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=DataNucleus",
+            "Level": "ERROR",
+            "Name": "DataNucleus"
+        },
+        {
+            "name": "metrics:name=buffers.direct.capacity",
+            "Value": 84517,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.total.init",
+            "Value": 463929344,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.pools.Metaspace.usage",
+            "Value": 0.9837030882557708,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "modelerType": "sun.management.CompilationImpl",
+            "CompilationTimeMonitoringSupported": true,
+            "name": "java.lang:type=Compilation",
+            "TotalCompilationTime": 9599,
+            "Name": "HotSpot 64-Bit Tiered Compilers",
+            "ObjectName": "java.lang:type=Compilation"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": false,
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=JPOX",
+            "Level": "ERROR",
+            "Name": "JPOX"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": true,
+            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=Datastore",
+            "Level": "ERROR",
+            "Name": "Datastore"
+        },
+        {
+            "name": "metrics:name=gc.G1-Old-Generation.count",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=qc_current_size",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "java.util.logging:type=Logging",
+            "modelerType": "sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
+            "LoggerNames": [
+                "sun.rmi.client.call",
+                "global",
+                "org.apache.ambari.metrics.sink.relocated.google.common.cache.CacheBuilder",
+                "org.apache.jasper.runtime.TldScanner",
+                "javax.management.monitor",
+                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.HttpTransportFactory",
+                "com.google.common.cache.LocalCache",
+                "javax.management.remote.misc",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemConfiguration",
+                "org.apache.ambari.metrics.sink.relocated.google.common.base.Platform",
+                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialConfiguration",
+                "javax.management",
+                "sun.management.jmxremote",
+                "javax.management.snmp",
+                "sun.rmi.transport.tcp",
+                "javax.management.notification",
+                "org.apache.jasper.servlet.JspServlet",
+                "sun.rmi.server.ref",
+                "javax.management.snmp.daemon",
+                "sun.rmi.client.ref",
+                "sun.rmi.dgc",
+                "javax.management.modelmbean",
+                "com.lmax.disruptor.FatalExceptionHandler",
+                "sun.net.www.protocol.http.HttpURLConnection",
+                "org.apache.jasper.EmbeddedServletOptions",
+                "com.google.common.util.concurrent.AbstractFuture",
+                "org.apache.curator.shaded.com.google.common.cache.LocalCache",
+                "javax.management.remote.rmi",
+                "javax.management.misc",
+                "org.apache.jasper.compiler.JspConfig",
+                "javax.security.sasl",
+                "javax.management.mlet",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem",
+                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.PropertyUtil",
+                "sun.rmi.server.call",
+                "org.apache.ambari.metrics.sink.relocated.google.common.cache.LocalCache",
+                "javax.management.timer",
+                "sun.rmi.transport.tcp.proxy",
+                "org.apache.jasper.security.SecurityClassLoad",
+                "sun.rmi.runtime",
+                "sun.rmi.transport.misc",
+                "org.apache.jasper.runtime.JspFactoryImpl",
+                "com.google.common.base.Platform",
+                "org.apache.jasper.compiler.JspRuntimeContext",
+                "javax.management.relation",
+                "org.apache.curator.shaded.com.google.common.cache.CacheBuilder",
+                "com.google.common.cache.CacheBuilder",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemConfigurationProperty",
+                "",
+                "javax.management.mbeanserver",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase"
+            ],
+            "ObjectName": "java.util.logging:type=Logging"
+        },
+        {
+            "name": "metrics:name=memory.pools.Compressed-Class-Space.usage",
+            "Value": 0.007023915648460388,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=gc.G1-Young-Generation.count",
+            "Value": 11,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=threads.deadlock.count",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=hs2_active_sessions",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.heap.init",
+            "Value": 461373440,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=threads.deadlocks",
+            "Value": "[]",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=threads.terminated.count",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=memory.pools.G1-Survivor-Space.usage",
+            "Value": 1.0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "Additive": true,
+            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
+            "Filter": "null",
+            "AppenderRefs": [
+                
+            ],
+            "IncludeLocation": false,
+            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=DataNucleus",
+            "Level": "ERROR",
+            "Name": "DataNucleus"
+        },
+        {
+            "Usage": {
+                "init": 0,
+                "committed": 7729152,
+                "used": 7541872,
+                "max": 1073741824
+            },
+            "UsageThresholdCount": 0,
+            "modelerType": "sun.management.MemoryPoolImpl",
+            "MemoryManagerNames": [
+                "Metaspace Manager"
+            ],
+            "UsageThresholdSupported": true,
+            "UsageThreshold": 0,
+            "PeakUsage": {
+                "init": 0,
+                "committed": 7729152,
+                "used": 7541872,
+                "max": 1073741824
+            },
+            "Name": "Compressed Class Space",
+            "UsageThresholdExceeded": false,
+            "ObjectName": "java.lang:type=MemoryPool,name=Compressed Class Space",
+            "Type": "NON_HEAP",
+            "CollectionUsageThresholdSupported": false,
+            "Valid": true,
+            "name": "java.lang:type=MemoryPool,name=Compressed Class Space",
+            "CollectionUsage": null
+        },
+        {
+            "Usage": {
+                "init": 29360128,
+                "committed": 264241152,
+                "used": 12582912,
+                "max": -1
+            },
+            "modelerType": "sun.management.MemoryPoolImpl",
+            "MemoryManagerNames": [
+                "G1 Old Generation",
+                "G1 Young Generation"
+            ],
+            "UsageThresholdSupported": false,
+            "CollectionUsageThresholdCount": 0,
+            "PeakUsage": {
+                "init": 29360128,
+                "committed": 285212672,
+                "used": 268435456,
+                "max": -1
+            },
+            "Name": "G1 Eden Space",
+            "CollectionUsageThreshold": 0,
+            "ObjectName": "java.lang:type=MemoryPool,name=G1 Eden Space",
+            "Type": "HEAP",
+            "CollectionUsageThresholdSupported": true,
+            "Valid": true,
+            "name": "java.lang:type=MemoryPool,name=G1 Eden Space",
+            "CollectionUsage": {
+                "init": 29360128,
+                "committed": 264241152,
+                "used": 0,
+                "max": -1
+            },
+            "CollectionUsageThresholdExceeded": false
+        },
+        {
+            "name": "metrics:name=buffers.direct.count",
+            "Value": 15,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "name": "metrics:name=classLoading.loaded",
+            "Value": 10532,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "modelerType": "org.apache.logging.log4j.core.jmx.StatusLoggerAdmin",
+            "StatusDataHistory": [
+                "2020-06-18 15:33:43,740 hiveserver2-web-55 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-common-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin",
+                "2020-06-18 15:33:43,758 hiveserver2-web-55 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-exec-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin"
             ],
             "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=StatusLogger",
             "Level": "WARN",
-            "StatusData": "[org.apache.logging.log4j.status.StatusData@50c5eebd, org.apache.logging.log4j.status.StatusData@bb2f664]",
+            "StatusData": "[org.apache.logging.log4j.status.StatusData@7c3dd05f, org.apache.logging.log4j.status.StatusData@1db33b4b]",
             "ObjectName": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=StatusLogger",
             "ContextName": "AsyncContext@764c12b6"
         },
@@ -48,22 +733,8 @@ output:
             "ConfigFilter": "null"
         },
         {
-            "name": "metrics:name=gc.G1-Old-Generation.time",
-            "Value": 0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@7b750804",
-            "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
-            "Filter": "null",
-            "Layout": "%d{ISO8601} %-5p [%t]: %c{2} (%F:%M(%L)) - %m%n",
-            "name": "org.apache.logging.log4j2:type=764c12b6,component=Appenders,name=DRFA",
-            "IgnoreExceptions": true,
-            "Name": "DRFA"
-        },
-        {
             "ImplementationName": "JMX",
-            "MBeanServerId": "hdpmaster1.myhome.net_1592467173094",
+            "MBeanServerId": "hdpmaster1.myhome.net_1592494423036",
             "ImplementationVersion": "1.8.0_161-b12",
             "modelerType": "javax.management.MBeanServerDelegate",
             "SpecificationVersion": "1.4",
@@ -116,13 +787,13 @@ output:
                 "-Dhadoop.policy.file=hadoop-policy.xml",
                 "-Dhadoop.security.logger=INFO,NullAppender"
             ],
-            "Uptime": 26556834,
+            "Uptime": 248301,
             "VmName": "Java HotSpot(TM) 64-Bit Server VM",
-            "StartTime": 1592467172994,
+            "StartTime": 1592494422936,
             "VmVersion": "25.161-b12",
             "SpecName": "Java Virtual Machine Specification",
             "ManagementSpecVersion": "1.2",
-            "Name": "48576@hdpmaster1.myhome.net",
+            "Name": "93016@hdpmaster1.myhome.net",
             "ObjectName": "java.lang:type=Runtime",
             "BootClassPath": "/usr/java/jdk1.8.0_161/jre/lib/resources.jar:/usr/java/jdk1.8.0_161/jre/lib/rt.jar:/usr/java/jdk1.8.0_161/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_161/jre/lib/jsse.jar:/usr/java/jdk1.8.0_161/jre/lib/jce.jar:/usr/java/jdk1.8.0_161/jre/lib/charsets.jar:/usr/java/jdk1.8.0_161/jre/lib/jfr.jar:/usr/java/jdk1.8.0_161/jre/classes",
             "LibraryPath": ":/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/3.1.4.0-315/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native",
@@ -458,106 +1129,9 @@ output:
             "BootClassPathSupported": true
         },
         {
-            "modelerType": "sun.management.ThreadImpl",
-            "ThreadAllocatedMemorySupported": true,
-            "ThreadContentionMonitoringEnabled": false,
-            "TotalStartedThreadCount": 784,
-            "CurrentThreadCpuTimeSupported": true,
-            "CurrentThreadUserTime": 110000000,
-            "PeakThreadCount": 53,
-            "AllThreadIds": [
-                794,
-                96,
-                90,
-                84,
-                81,
-                77,
-                72,
-                70,
-                69,
-                68,
-                67,
-                66,
-                65,
-                64,
-                63,
-                62,
-                61,
-                60,
-                59,
-                58,
-                57,
-                55,
-                54,
-                53,
-                52,
-                51,
-                50,
-                49,
-                48,
-                47,
-                46,
-                44,
-                43,
-                42,
-                41,
-                40,
-                39,
-                38,
-                34,
-                29,
-                25,
-                23,
-                22,
-                20,
-                19,
-                14,
-                13,
-                12,
-                5,
-                3,
-                2
-            ],
-            "ThreadAllocatedMemoryEnabled": true,
-            "CurrentThreadCpuTime": 122027506,
-            "ObjectName": "java.lang:type=Threading",
-            "ThreadContentionMonitoringSupported": true,
-            "ThreadCpuTimeSupported": true,
-            "ThreadCount": 51,
-            "ThreadCpuTimeEnabled": true,
-            "name": "java.lang:type=Threading",
-            "ObjectMonitorUsageSupported": true,
-            "SynchronizerUsageSupported": true,
-            "DaemonThreadCount": 38
-        },
-        {
-            "Usage": {
-                "init": 2555904,
-                "committed": 23199744,
-                "used": 22993728,
-                "max": 251658240
-            },
-            "UsageThresholdCount": 0,
-            "modelerType": "sun.management.MemoryPoolImpl",
-            "MemoryManagerNames": [
-                "CodeCacheManager"
-            ],
-            "UsageThresholdSupported": true,
-            "UsageThreshold": 0,
-            "PeakUsage": {
-                "init": 2555904,
-                "committed": 23199744,
-                "used": 22993728,
-                "max": 251658240
-            },
-            "Name": "Code Cache",
-            "UsageThresholdExceeded": false,
-            "ObjectName": "java.lang:type=MemoryPool,name=Code Cache",
-            "Type": "NON_HEAP",
-            "Valid": true,
-            "CollectionUsageThresholdSupported": false,
-            "name": "java.lang:type=MemoryPool,name=Code Cache",
-            "CollectionUsage": null
+            "name": "metrics:name=exec_async_pool_size",
+            "Value": 1,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
             "Additive": true,
@@ -572,20 +1146,63 @@ output:
             "Name": "JPOX"
         },
         {
+            "memory.pools.Metaspace.usage": 0.9800201681255009,
+            "memory.heap.max": 25019023360,
+            "memory.non-heap.init": 2555904,
+            "classLoading.unloaded": 0,
+            "memory.pools.G1-Eden-Space.usage": 0.047619047619047616,
+            "threads.waiting.count": 15,
+            "cumulative_connection_count": 2,
+            "gc.G1-Young-Generation.count": 11,
+            "memory.total.used": 188833224,
+            "memory.non-heap.committed": 87744512,
+            "qc_max_size": 2147483648,
+            "memory.total.init": 463929344,
+            "hs2_open_sessions": 0,
+            "open_connections": 0,
+            "buffers.direct.count": 15,
+            "hs2_avg_open_session_time": "NaN",
+            "buffers.direct.used": 84517,
+            "threads.timed_waiting.count": 18,
+            "memory.heap.init": 461373440,
+            "buffers.mapped.capacity": 0,
+            "buffers.direct.capacity": 84517,
+            "buffers.mapped.count": 0,
             "name": "Hadoop:service=hiveserver2,name=hiveserver2",
-            "tag.rate_unit": "events/second",
             "tag.duration_unit": "milliseconds",
+            "memory.pools.Compressed-Class-Space.usage": 0.007023915648460388,
+            "gc.G1-Old-Generation.time": 0,
+            "jvm.pause.extraSleepTime": 2,
+            "threads.runnable.count": 16,
+            "hs2_active_sessions": 0,
+            "memory.heap.committed": 461373440,
             "modelerType": "hiveserver2",
-            "tag.Hostname": "hdpmaster1.myhome.net"
-        },
-        {
-            "modelerType": "sun.management.ManagementFactoryHelper$1",
-            "name": "java.nio:type=BufferPool,name=direct",
-            "TotalCapacity": 175371,
-            "MemoryUsed": 175371,
-            "Count": 30,
-            "Name": "direct",
-            "ObjectName": "java.nio:type=BufferPool,name=direct"
+            "memory.non-heap.max": -1,
+            "threads.daemon.count": 40,
+            "memory.heap.usage": 0.0041072922200589045,
+            "gc.G1-Young-Generation.time": 121,
+            "classLoading.loaded": 10532,
+            "gc.G1-Old-Generation.count": 0,
+            "memory.pools.Code-Cache.usage": 0.05328318277994792,
+            "memory.pools.G1-Old-Gen.usage": 0.0024308462854402964,
+            "memory.non-heap.usage": -86072784,
+            "memory.total.max": 25019023359,
+            "threads.count": 49,
+            "tag.Hostname": "hdpmaster1.myhome.net",
+            "memory.heap.used": 102760440,
+            "qc_current_size": 0,
+            "tag.rate_unit": "events/second",
+            "threads.terminated.count": 0,
+            "exec_async_pool_size": 1,
+            "threads.blocked.count": 0,
+            "threads.deadlock.count": 0,
+            "buffers.mapped.used": 0,
+            "threads.new.count": 0,
+            "exec_async_queue_size": 0,
+            "hs2_avg_active_session_time": "NaN",
+            "memory.non-heap.used": 86072784,
+            "memory.pools.G1-Survivor-Space.usage": 1.0,
+            "memory.total.committed": 549117952
         },
         {
             "MemoryPoolNames": [
@@ -594,7 +1211,7 @@ output:
             ],
             "modelerType": "sun.management.GarbageCollectorImpl",
             "LastGcInfo": {
-                "duration": 20,
+                "duration": 15,
                 "memoryUsageBeforeGc": [
                     {
                         "value": {
@@ -608,8 +1225,8 @@ output:
                     {
                         "value": {
                             "init": 0,
-                            "committed": 7675904,
-                            "used": 7426488,
+                            "committed": 7729152,
+                            "used": 7538536,
                             "max": 1073741824
                         },
                         "key": "Compressed Class Space"
@@ -617,8 +1234,8 @@ output:
                     {
                         "value": {
                             "init": 0,
-                            "committed": 67706880,
-                            "used": 66228456,
+                            "committed": 66187264,
+                            "used": 65047560,
                             "max": -1
                         },
                         "key": "Metaspace"
@@ -627,7 +1244,7 @@ output:
                         "value": {
                             "init": 432013312,
                             "committed": 167772160,
-                            "used": 55170544,
+                            "used": 57723992,
                             "max": 25019023360
                         },
                         "key": "G1 Old Gen"
@@ -644,17 +1261,17 @@ output:
                     {
                         "value": {
                             "init": 2555904,
-                            "committed": 22740992,
-                            "used": 22460160,
+                            "committed": 13369344,
+                            "used": 13207808,
                             "max": 251658240
                         },
                         "key": "Code Cache"
                     }
                 ],
                 "GcThreadCount": 18,
-                "startTime": 25714021,
-                "endTime": 25714041,
-                "id": 22,
+                "startTime": 214042,
+                "endTime": 214057,
+                "id": 11,
                 "memoryUsageAfterGc": [
                     {
                         "value": {
@@ -668,8 +1285,8 @@ output:
                     {
                         "value": {
                             "init": 0,
-                            "committed": 7675904,
-                            "used": 7426488,
+                            "committed": 7729152,
+                            "used": 7538536,
                             "max": 1073741824
                         },
                         "key": "Compressed Class Space"
@@ -677,8 +1294,8 @@ output:
                     {
                         "value": {
                             "init": 0,
-                            "committed": 67706880,
-                            "used": 66228456,
+                            "committed": 66187264,
+                            "used": 65047560,
                             "max": -1
                         },
                         "key": "Metaspace"
@@ -687,7 +1304,7 @@ output:
                         "value": {
                             "init": 432013312,
                             "committed": 167772160,
-                            "used": 55613944,
+                            "used": 60817400,
                             "max": 25019023360
                         },
                         "key": "G1 Old Gen"
@@ -704,40 +1321,25 @@ output:
                     {
                         "value": {
                             "init": 2555904,
-                            "committed": 22740992,
-                            "used": 22460160,
+                            "committed": 13369344,
+                            "used": 13207808,
                             "max": 251658240
                         },
                         "key": "Code Cache"
                     }
                 ]
             },
-            "CollectionTime": 340,
+            "CollectionTime": 121,
             "Valid": true,
             "name": "java.lang:type=GarbageCollector,name=G1 Young Generation",
-            "CollectionCount": 22,
+            "CollectionCount": 11,
             "Name": "G1 Young Generation",
             "ObjectName": "java.lang:type=GarbageCollector,name=G1 Young Generation"
         },
         {
-            "name": "metrics:name=threads.blocked.count",
-            "Value": 0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=memory.non-heap.usage",
-            "Value": -96874632,
+            "Value": -86099792,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "MemoryPoolNames": [
-                "Code Cache"
-            ],
-            "modelerType": "sun.management.MemoryManagerImpl",
-            "Valid": true,
-            "name": "java.lang:type=MemoryManager,name=CodeCacheManager",
-            "Name": "CodeCacheManager",
-            "ObjectName": "java.lang:type=MemoryManager,name=CodeCacheManager"
         },
         {
             "Additive": true,
@@ -752,32 +1354,22 @@ output:
             "Name": ""
         },
         {
-            "name": "metrics:name=memory.non-heap.init",
-            "Value": 2555904,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "metrics:name=memory.pools.Code-Cache.usage",
-            "Value": 0.09139048258463542,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=buffers.direct.used",
-            "Value": 175371,
+            "Value": 84517,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "LoadedClassCount": 10399,
+            "LoadedClassCount": 10532,
             "UnloadedClassCount": 0,
             "modelerType": "sun.management.ClassLoadingImpl",
             "Verbose": false,
             "name": "java.lang:type=ClassLoading",
-            "TotalLoadedClassCount": 10399,
+            "TotalLoadedClassCount": 10532,
             "ObjectName": "java.lang:type=ClassLoading"
         },
         {
             "name": "metrics:name=memory.total.committed",
-            "Value": 560021504,
+            "Value": 549117952,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
@@ -786,42 +1378,7 @@ output:
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "Usage": {
-                "init": 0,
-                "committed": 29360128,
-                "used": 29360128,
-                "max": -1
-            },
-            "modelerType": "sun.management.MemoryPoolImpl",
-            "MemoryManagerNames": [
-                "G1 Old Generation",
-                "G1 Young Generation"
-            ],
-            "UsageThresholdSupported": false,
-            "CollectionUsageThresholdCount": 0,
-            "PeakUsage": {
-                "init": 0,
-                "committed": 37748736,
-                "used": 37748736,
-                "max": -1
-            },
-            "Name": "G1 Survivor Space",
-            "CollectionUsageThreshold": 0,
-            "ObjectName": "java.lang:type=MemoryPool,name=G1 Survivor Space",
-            "Type": "HEAP",
-            "Valid": true,
-            "CollectionUsageThresholdSupported": true,
-            "name": "java.lang:type=MemoryPool,name=G1 Survivor Space",
-            "CollectionUsage": {
-                "init": 0,
-                "committed": 29360128,
-                "used": 29360128,
-                "max": -1
-            },
-            "CollectionUsageThresholdExceeded": false
-        },
-        {
-            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@67e8c0d8",
+            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@9d566a2",
             "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
             "Filter": "null",
             "Layout": "%d{yy/MM/dd HH:mm:ss} [%t]: %p %c{2}: %m%n",
@@ -835,22 +1392,15 @@ output:
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "modelerType": "org.apache.logging.log4j.core.jmx.StatusLoggerAdmin",
-            "StatusDataHistory": [
-                "2020-06-18 07:59:33,815 hiveserver2-web-64 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-common-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin",
-                "2020-06-18 07:59:33,833 hiveserver2-web-64 INFO Scanning for classes in '/usr/hdp/3.1.4.0-315/hive/lib/hive-exec-3.1.0.3.1.4.0-315.jar' matching criteria annotated with @Plugin"
-            ],
-            "name": "org.apache.logging.log4j2:type=764c12b6,component=StatusLogger",
-            "Level": "WARN",
-            "StatusData": "[org.apache.logging.log4j.status.StatusData@50c5eebd, org.apache.logging.log4j.status.StatusData@bb2f664]",
-            "ObjectName": "org.apache.logging.log4j2:type=764c12b6,component=StatusLogger",
-            "ContextName": "764c12b6"
+            "name": "metrics:name=qc_max_size",
+            "Value": 2147483648,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
             "Usage": {
                 "init": 0,
-                "committed": 67706880,
-                "used": 66431608,
+                "committed": 66449408,
+                "used": 65125304,
                 "max": -1
             },
             "UsageThresholdCount": 0,
@@ -862,40 +1412,18 @@ output:
             "UsageThreshold": 0,
             "PeakUsage": {
                 "init": 0,
-                "committed": 67706880,
-                "used": 66431608,
+                "committed": 66449408,
+                "used": 65125304,
                 "max": -1
             },
             "Name": "Metaspace",
             "UsageThresholdExceeded": false,
             "ObjectName": "java.lang:type=MemoryPool,name=Metaspace",
             "Type": "NON_HEAP",
-            "Valid": true,
             "CollectionUsageThresholdSupported": false,
+            "Valid": true,
             "name": "java.lang:type=MemoryPool,name=Metaspace",
             "CollectionUsage": null
-        },
-        {
-            "name": "metrics:name=threads.timed_waiting.count",
-            "Value": 17,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "metrics:name=memory.heap.usage",
-            "Value": 0.0070845595149562225,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": false,
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=org.apache.zookeeper.server.NIOServerCnxn",
-            "Level": "WARN",
-            "Name": "org.apache.zookeeper.server.NIOServerCnxn"
         },
         {
             "name": "org.apache.logging.log4j2:type=764c12b6,component=ContextSelector",
@@ -914,17 +1442,13 @@ output:
         },
         {
             "name": "metrics:name=memory.pools.G1-Old-Gen.usage",
-            "Value": 0.002222866304562258,
+            "Value": 0.0024308462854402964,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@fdb18bc",
-            "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
-            "Filter": "null",
-            "Layout": "%d{ISO8601} %-5p [%t]: %c{2} (%F:%M(%L)) - %m%n",
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Appenders,name=DRFA",
-            "IgnoreExceptions": true,
-            "Name": "DRFA"
+            "name": "metrics:name=exec_async_queue_size",
+            "Value": 0,
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
             "Status": "STARTED",
@@ -940,195 +1464,9 @@ output:
             "ConfigFilter": "null"
         },
         {
-            "name": "metrics:name=gc.G1-Young-Generation.time",
-            "Value": 340,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                "DRFA"
-            ],
-            "IncludeLocation": false,
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=",
-            "Level": "INFO",
-            "Name": ""
-        },
-        {
-            "modelerType": "sun.management.ManagementFactoryHelper$1",
-            "name": "java.nio:type=BufferPool,name=mapped",
-            "TotalCapacity": 0,
-            "MemoryUsed": 0,
-            "Count": 0,
-            "Name": "mapped",
-            "ObjectName": "java.nio:type=BufferPool,name=mapped"
-        },
-        {
             "name": "metrics:name=memory.non-heap.used",
-            "Value": 96901608,
+            "Value": 86101864,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": false,
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=org.apache.zookeeper.ClientCnxnSocketNIO",
-            "Level": "WARN",
-            "Name": "org.apache.zookeeper.ClientCnxnSocketNIO"
-        },
-        {
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=AsyncLoggerRingBuffer",
-            "BufferSize": 262144,
-            "RemainingCapacity": 262144,
-            "modelerType": "org.apache.logging.log4j.core.jmx.RingBufferAdmin"
-        },
-        {
-            "name": "com.sun.management:type=DiagnosticCommand",
-            "modelerType": "sun.management.DiagnosticCommandImpl"
-        },
-        {
-            "name": "metrics:name=buffers.mapped.used",
-            "Value": 0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "com.sun.management:type=HotSpotDiagnostic",
-            "DiagnosticOptions": [
-                {
-                    "name": "HeapDumpBeforeFullGC",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "HeapDumpAfterFullGC",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "HeapDumpOnOutOfMemoryError",
-                    "writeable": true,
-                    "value": "true",
-                    "origin": "VM_CREATION"
-                },
-                {
-                    "name": "HeapDumpPath",
-                    "writeable": true,
-                    "value": "/var/log/hive/hs2_heapdump.hprof",
-                    "origin": "VM_CREATION"
-                },
-                {
-                    "name": "CMSAbortablePrecleanWaitMillis",
-                    "writeable": true,
-                    "value": "100",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "CMSWaitDuration",
-                    "writeable": true,
-                    "value": "2000",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "CMSTriggerInterval",
-                    "writeable": true,
-                    "value": "-1",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintGC",
-                    "writeable": true,
-                    "value": "true",
-                    "origin": "VM_CREATION"
-                },
-                {
-                    "name": "PrintGCDetails",
-                    "writeable": true,
-                    "value": "true",
-                    "origin": "VM_CREATION"
-                },
-                {
-                    "name": "PrintGCDateStamps",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintGCTimeStamps",
-                    "writeable": true,
-                    "value": "true",
-                    "origin": "VM_CREATION"
-                },
-                {
-                    "name": "PrintGCID",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintClassHistogramBeforeFullGC",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintClassHistogramAfterFullGC",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintClassHistogram",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "MinHeapFreeRatio",
-                    "writeable": true,
-                    "value": "40",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "MaxHeapFreeRatio",
-                    "writeable": true,
-                    "value": "70",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "PrintConcurrentLocks",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                },
-                {
-                    "name": "UnlockCommercialFeatures",
-                    "writeable": true,
-                    "value": "false",
-                    "origin": "DEFAULT"
-                }
-            ],
-            "modelerType": "sun.management.HotSpotDiagnostic",
-            "ObjectName": "com.sun.management:type=HotSpotDiagnostic"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": true,
-            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=org.apache.zookeeper.ClientCnxnSocketNIO",
-            "Level": "WARN",
-            "Name": "org.apache.zookeeper.ClientCnxnSocketNIO"
         },
         {
             "name": "metrics:name=threads.new.count",
@@ -1136,25 +1474,8 @@ output:
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": true,
-            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=DataNucleus",
-            "Level": "ERROR",
-            "Name": "DataNucleus"
-        },
-        {
-            "name": "metrics:name=buffers.direct.capacity",
-            "Value": 175371,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=memory.heap.used",
-            "Value": 177248760,
+            "Value": 102760440,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
@@ -1163,26 +1484,21 @@ output:
             "modelerType": "org.apache.logging.log4j.core.jmx.ContextSelectorAdmin"
         },
         {
-            "name": "metrics:name=memory.total.init",
-            "Value": 463929344,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "modelerType": "sun.management.OperatingSystemImpl",
-            "OpenFileDescriptorCount": 653,
-            "CommittedVirtualMemorySize": 28084232192,
-            "FreePhysicalMemorySize": 17384693760,
-            "SystemLoadAverage": 1.27,
+            "OpenFileDescriptorCount": 654,
+            "CommittedVirtualMemorySize": 28070973440,
+            "FreePhysicalMemorySize": 17139277824,
+            "SystemLoadAverage": 1.25,
             "Arch": "amd64",
-            "ProcessCpuLoad": 0.0008808431795401391,
+            "ProcessCpuLoad": 0.0009450971269047342,
             "FreeSwapSpaceSize": 2147479552,
             "TotalPhysicalMemorySize": 29490126848,
             "Name": "Linux",
             "ObjectName": "java.lang:type=OperatingSystem",
             "TotalSwapSpaceSize": 2147479552,
-            "ProcessCpuTime": 120410000000,
+            "ProcessCpuTime": 21450000000,
             "MaxFileDescriptorCount": 32000,
-            "SystemCpuLoad": 0.08580888159893081,
+            "SystemCpuLoad": 0.13247353728044667,
             "Version": "3.10.0-1062.18.1.el7.x86_64",
             "AvailableProcessors": 8,
             "name": "java.lang:type=OperatingSystem"
@@ -1190,31 +1506,6 @@ output:
         {
             "name": "Hadoop:service=hiveserver2,name=MetricsSystem,sub=Control",
             "modelerType": "org.apache.hadoop.metrics2.impl.MetricsSystemImpl"
-        },
-        {
-            "name": "metrics:name=memory.pools.Metaspace.usage",
-            "Value": 0.9814437764670296,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "modelerType": "sun.management.CompilationImpl",
-            "CompilationTimeMonitoringSupported": true,
-            "name": "java.lang:type=Compilation",
-            "TotalCompilationTime": 18634,
-            "Name": "HotSpot 64-Bit Tiered Compilers",
-            "ObjectName": "java.lang:type=Compilation"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": false,
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=JPOX",
-            "Level": "ERROR",
-            "Name": "JPOX"
         },
         {
             "Additive": true,
@@ -1229,14 +1520,14 @@ output:
             "Name": "Datastore"
         },
         {
-            "SnapshotNumOps": 7965,
+            "SnapshotNumOps": 72,
             "modelerType": "MetricsSystem,sub=Stats",
             "SnapshotAvgTime": 0.0,
             "NumAllSources": 2,
-            "Sink_timelineNumOps": 2655,
+            "Sink_timelineNumOps": 24,
             "DroppedPubAll": 0,
             "Sink_timelineQsize": 0,
-            "PublishNumOps": 2655,
+            "PublishNumOps": 24,
             "name": "Hadoop:service=hiveserver2,name=MetricsSystem,sub=Stats",
             "tag.Context": "metricssystem",
             "PublishAvgTime": 0.0,
@@ -1245,13 +1536,13 @@ output:
             "Sink_timelineDropped": 0,
             "tag.Hostname": "hdpmaster1.myhome.net",
             "NumActiveSinks": 1,
-            "Sink_timelineAvgTime": 3.0
+            "Sink_timelineAvgTime": 1.0
         },
         {
             "Usage": {
                 "init": 432013312,
                 "committed": 167772160,
-                "used": 55613944,
+                "used": 60817400,
                 "max": 25019023360
             },
             "UsageThresholdCount": 0,
@@ -1265,7 +1556,7 @@ output:
             "PeakUsage": {
                 "init": 432013312,
                 "committed": 432013312,
-                "used": 55613944,
+                "used": 63403008,
                 "max": 25019023360
             },
             "Name": "G1 Old Gen",
@@ -1273,8 +1564,8 @@ output:
             "UsageThresholdExceeded": false,
             "ObjectName": "java.lang:type=MemoryPool,name=G1 Old Gen",
             "Type": "HEAP",
-            "Valid": true,
             "CollectionUsageThresholdSupported": true,
+            "Valid": true,
             "name": "java.lang:type=MemoryPool,name=G1 Old Gen",
             "CollectionUsage": {
                 "init": 432013312,
@@ -1283,81 +1574,6 @@ output:
                 "max": 25019023360
             },
             "CollectionUsageThresholdExceeded": false
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": true,
-            "name": "org.apache.logging.log4j2:type=764c12b6,component=Loggers,name=Datastore",
-            "Level": "ERROR",
-            "Name": "Datastore"
-        },
-        {
-            "name": "metrics:name=gc.G1-Old-Generation.count",
-            "Value": 0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "java.util.logging:type=Logging",
-            "modelerType": "sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
-            "LoggerNames": [
-                "sun.rmi.client.call",
-                "global",
-                "org.apache.ambari.metrics.sink.relocated.google.common.cache.CacheBuilder",
-                "org.apache.jasper.runtime.TldScanner",
-                "javax.management.monitor",
-                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.HttpTransportFactory",
-                "com.google.common.cache.LocalCache",
-                "javax.management.remote.misc",
-                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemConfiguration",
-                "org.apache.ambari.metrics.sink.relocated.google.common.base.Platform",
-                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.CredentialConfiguration",
-                "javax.management",
-                "sun.management.jmxremote",
-                "javax.management.snmp",
-                "sun.rmi.transport.tcp",
-                "javax.management.notification",
-                "org.apache.jasper.servlet.JspServlet",
-                "sun.rmi.server.ref",
-                "javax.management.snmp.daemon",
-                "sun.rmi.client.ref",
-                "sun.rmi.dgc",
-                "javax.management.modelmbean",
-                "com.lmax.disruptor.FatalExceptionHandler",
-                "sun.net.www.protocol.http.HttpURLConnection",
-                "org.apache.jasper.EmbeddedServletOptions",
-                "com.google.common.util.concurrent.AbstractFuture",
-                "org.apache.curator.shaded.com.google.common.cache.LocalCache",
-                "javax.management.remote.rmi",
-                "javax.management.misc",
-                "org.apache.jasper.compiler.JspConfig",
-                "javax.security.sasl",
-                "javax.management.mlet",
-                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem",
-                "com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.util.PropertyUtil",
-                "sun.rmi.server.call",
-                "org.apache.ambari.metrics.sink.relocated.google.common.cache.LocalCache",
-                "javax.management.timer",
-                "sun.rmi.transport.tcp.proxy",
-                "org.apache.jasper.security.SecurityClassLoad",
-                "sun.rmi.runtime",
-                "sun.rmi.transport.misc",
-                "org.apache.jasper.runtime.JspFactoryImpl",
-                "com.google.common.base.Platform",
-                "org.apache.jasper.compiler.JspRuntimeContext",
-                "javax.management.relation",
-                "org.apache.curator.shaded.com.google.common.cache.CacheBuilder",
-                "com.google.common.cache.CacheBuilder",
-                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemConfigurationProperty",
-                "",
-                "javax.management.mbeanserver",
-                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase"
-            ],
-            "ObjectName": "java.util.logging:type=Logging"
         },
         {
             "MemoryPoolNames": [
@@ -1386,13 +1602,8 @@ output:
             "ObjectName": "java.lang:type=MemoryManager,name=Metaspace Manager"
         },
         {
-            "name": "metrics:name=memory.pools.Compressed-Class-Space.usage",
-            "Value": 0.006935805082321167,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=threads.daemon.count",
-            "Value": 38,
+            "Value": 40,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
@@ -1401,17 +1612,12 @@ output:
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "name": "metrics:name=gc.G1-Young-Generation.count",
-            "Value": 22,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=threads.count",
-            "Value": 51,
+            "Value": 49,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@dc3a4b",
+            "ErrorHandler": "org.apache.logging.log4j.core.appender.DefaultErrorHandler@509e8c10",
             "modelerType": "org.apache.logging.log4j.core.jmx.AppenderAdmin",
             "Filter": "null",
             "Layout": "%d{yy/MM/dd HH:mm:ss} [%t]: %p %c{2}: %m%n",
@@ -1420,75 +1626,14 @@ output:
             "Name": "console"
         },
         {
-            "name": "metrics:name=threads.deadlock.count",
-            "Value": 0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "metrics:name=memory.heap.init",
-            "Value": 461373440,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=memory.pools.G1-Eden-Space.usage",
-            "Value": 0.3492063492063492,
+            "Value": 0.047619047619047616,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "name": "metrics:name=threads.deadlocks",
-            "Value": "[]",
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "metrics:name=threads.terminated.count",
+            "name": "metrics:name=hs2_open_sessions",
             "Value": 0,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "name": "metrics:name=memory.pools.G1-Survivor-Space.usage",
-            "Value": 1.0,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
-            "Additive": true,
-            "modelerType": "org.apache.logging.log4j.core.jmx.LoggerConfigAdmin",
-            "Filter": "null",
-            "AppenderRefs": [
-                
-            ],
-            "IncludeLocation": false,
-            "name": "org.apache.logging.log4j2:type=AsyncContext@764c12b6,component=Loggers,name=DataNucleus",
-            "Level": "ERROR",
-            "Name": "DataNucleus"
-        },
-        {
-            "Usage": {
-                "init": 0,
-                "committed": 7675904,
-                "used": 7447264,
-                "max": 1073741824
-            },
-            "UsageThresholdCount": 0,
-            "modelerType": "sun.management.MemoryPoolImpl",
-            "MemoryManagerNames": [
-                "Metaspace Manager"
-            ],
-            "UsageThresholdSupported": true,
-            "UsageThreshold": 0,
-            "PeakUsage": {
-                "init": 0,
-                "committed": 7675904,
-                "used": 7447264,
-                "max": 1073741824
-            },
-            "Name": "Compressed Class Space",
-            "UsageThresholdExceeded": false,
-            "ObjectName": "java.lang:type=MemoryPool,name=Compressed Class Space",
-            "Type": "NON_HEAP",
-            "Valid": true,
-            "CollectionUsageThresholdSupported": false,
-            "name": "java.lang:type=MemoryPool,name=Compressed Class Space",
-            "CollectionUsage": null
         },
         {
             "ObjectPendingFinalizationCount": 0,
@@ -1497,70 +1642,35 @@ output:
             "HeapMemoryUsage": {
                 "init": 461373440,
                 "committed": 461373440,
-                "used": 177248760,
+                "used": 102760440,
                 "max": 25019023360
             },
             "name": "java.lang:type=Memory",
             "NonHeapMemoryUsage": {
                 "init": 2555904,
-                "committed": 98648064,
-                "used": 96934304,
+                "committed": 87810048,
+                "used": 86170848,
                 "max": -1
             },
             "ObjectName": "java.lang:type=Memory"
         },
         {
-            "Usage": {
-                "init": 29360128,
-                "committed": 264241152,
-                "used": 92274688,
-                "max": -1
-            },
-            "modelerType": "sun.management.MemoryPoolImpl",
-            "MemoryManagerNames": [
-                "G1 Old Generation",
-                "G1 Young Generation"
-            ],
-            "UsageThresholdSupported": false,
-            "CollectionUsageThresholdCount": 0,
-            "PeakUsage": {
-                "init": 29360128,
-                "committed": 285212672,
-                "used": 268435456,
-                "max": -1
-            },
-            "Name": "G1 Eden Space",
-            "CollectionUsageThreshold": 0,
-            "ObjectName": "java.lang:type=MemoryPool,name=G1 Eden Space",
-            "Type": "HEAP",
-            "Valid": true,
-            "CollectionUsageThresholdSupported": true,
-            "name": "java.lang:type=MemoryPool,name=G1 Eden Space",
-            "CollectionUsage": {
-                "init": 29360128,
-                "committed": 264241152,
-                "used": 0,
-                "max": -1
-            },
-            "CollectionUsageThresholdExceeded": false
-        },
-        {
-            "name": "metrics:name=buffers.direct.count",
-            "Value": 30,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
-        },
-        {
             "name": "metrics:name=memory.total.used",
-            "Value": 274182424,
+            "Value": 188931288,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
             "name": "metrics:name=memory.non-heap.committed",
-            "Value": 98648064,
+            "Value": 87810048,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
-            "LoginSuccessNumOps": 9,
+            "name": "metrics:name=hs2_avg_active_session_time",
+            "Value": "NaN",
+            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+        },
+        {
+            "LoginSuccessNumOps": 5,
             "modelerType": "UgiMetrics",
             "RenewalFailuresTotal": 0,
             "LoginFailureAvgTime": 0.0,
@@ -1571,16 +1681,11 @@ output:
             "tag.Context": "ugi",
             "GetGroupsAvgTime": 0.0,
             "tag.Hostname": "hdpmaster1.myhome.net",
-            "LoginSuccessAvgTime": 8.0
-        },
-        {
-            "name": "metrics:name=classLoading.loaded",
-            "Value": 10405,
-            "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
+            "LoginSuccessAvgTime": 56.75
         },
         {
             "name": "metrics:name=threads.waiting.count",
-            "Value": 18,
+            "Value": 15,
             "modelerType": "com.codahale.metrics.JmxReporter$JmxGauge"
         },
         {
